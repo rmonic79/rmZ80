@@ -1,0 +1,22 @@
+# ============================================================
+# NEVER commit: third-party material and build artifacts.
+# Verilator .gch files are large and can block a push.
+# ============================================================
+
+# --- THIRD-PARTY material: used locally, NOT part of the release ---
+#     (documents and SingleStepTests vectors: see docs/00-sources.md and sim/get_sst.sh)
+reference/*
+
+# --- build Verilator / C++ ---
+sim/obj_*/
+sim/build*/
+sim/log/
+**/*.gch
+**/*.exe
+**/*.o
+*.vcd
+
+# --- Quartus ---
+db/
+incremental_db/
+output_files/

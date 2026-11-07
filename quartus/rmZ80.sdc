@@ -1,0 +1,17 @@
+# This file is part of rmZ80, a Zilog Z80 core in SystemVerilog.
+# Copyright (c) 2026 Umberto Parisi (rmonic79)
+#
+# rmZ80 is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+# License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any
+# later version. It is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the
+# implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+# more details: LICENSE in the root of the repository, or <https://www.gnu.org/licenses/>.
+#
+# A commercial license, for use without the obligations of the GPL (for example in closed-source products), is
+# available from the author, who can also be contacted for other licensing needs.
+
+# Constraint: 96 MHz, the system clock of the arcade core (Darius) where rmZ80 is used.
+# The slack must be >= 0.
+create_clock -name clk -period 10.417 [get_ports clk]
+derive_clock_uncertainty
+set_false_path -from [get_ports {rst}]

@@ -1,0 +1,10 @@
+db/
+incremental_db/
+output_files/
+*.qws
+c5_pin_model_dump.txt
+_build*.log
+_*.fit.rpt
+_*.sta.rpt
+_*_paths*
+_wp*
